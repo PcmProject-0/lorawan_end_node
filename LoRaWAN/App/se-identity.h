@@ -90,49 +90,49 @@ extern "C" {
  * When set to 1 DevEui is LORAWAN_DEVICE_EUI
  * When set to 0 DevEui is automatically set with a value provided by MCU platform
  */
-#define STATIC_DEVICE_EUI                                  0
+#define STATIC_DEVICE_EUI                                  1//0
 
 /*!
  * end-device IEEE EUI (big endian)
  */
-#define LORAWAN_DEVICE_EUI                                 { 0x00, 0x80, 0xE1, 0x01, 0x01, 0x01, 0x01, 0x01 }
+#define LORAWAN_DEVICE_EUI                                { 0xE2, 0x4F, 0x43, 0xFF, 0xFE, 0x44, 0xC0, 0xC3 }// { 0x00, 0x80, 0xE1, 0x01, 0x01, 0x01, 0x01, 0x00 }
 
 /*!
  * App/Join server IEEE EUI (big endian)
  */
-#define LORAWAN_JOIN_EUI                                   { 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01 }
+#define LORAWAN_JOIN_EUI                                  { 0xE6, 0xB6, 0xEF, 0x9A, 0xA9, 0xDF, 0x9E, 0xD8 } // { 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01 }
 
 /*!
- * When set to 1 DevAddr is LORAWAN_DEVICE_ADDRESS
+ * When set to 1 DevAddr is LORAWAN_DEVICE_ADDRESS0
  * When set to 0 DevAddr is automatically set with a value provided by a pseudo
  *      random generator seeded with a value provided by the MCU platform
  */
-#define STATIC_DEVICE_ADDRESS                              0
+#define STATIC_DEVICE_ADDRESS                              1//0
 
 /*!
  * Device address on the network (big endian)
  */
-#define LORAWAN_DEVICE_ADDRESS                             ( uint32_t )0x0100000A
+#define LORAWAN_DEVICE_ADDRESS                             ( uint32_t )0x260B69E7//pcm---0x0133E596 //0x0100000A
 
 /*!
  * Application root key
  */
-#define LORAWAN_APP_KEY                                    2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C
+#define LORAWAN_APP_KEY                                    11,22,33,44,55,66,77,88,99,AA,BB,CC,DD,EE,FF,00//pcm---E2,4F,43,FF,FE,44,C0,C3,E6,B6,EF,9A,A9,DF,9E,D8//2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C
 
 /*!
  * Network root key
  */
-#define LORAWAN_NWK_KEY                                    2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C
+#define LORAWAN_NWK_KEY                                    11,22,33,44,55,66,77,88,99,AA,BB,CC,DD,EE,FF,00 //pcm---2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C
 
 /*!
  * Forwarding Network session key
  */
-#define LORAWAN_NWK_S_KEY                                  2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C
+#define LORAWAN_NWK_S_KEY                                  D3,41,4C,9D,4E,91,35,12,02,E7,01,49,3F,45,95,C2//pcm---11,22,33,44,55,66,77,88,99,AA,BB,CC,DD,EE,FF,00 //2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C
 
 /*!
  * Application session key
  */
-#define LORAWAN_APP_S_KEY                                  2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C
+#define LORAWAN_APP_S_KEY                                  FE,A0,EF,DD,99,EB,EA,3F,67,8C,14,79,6E,9C,59,B1//pcm---11,22,33,44,55,66,77,88,99,AA,BB,CC,DD,EE,FF,00 //2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C 
 
 /*!
  * Format commissioning keys
