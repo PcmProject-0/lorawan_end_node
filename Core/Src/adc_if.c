@@ -24,7 +24,7 @@
 #include "sys_app.h"
 
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* External variables ---------------------------------------------------------*/
@@ -134,6 +134,8 @@ int16_t SYS_GetTemperatureLevel(void)
   temperatureDegreeC = COMPUTE_TEMPERATURE(measuredLevel, batteryLevelmV);
 
   APP_LOG(TS_ON, VLEVEL_L, "temp= %d\n\r", temperatureDegreeC >> 8);
+  //pcm+++
+  printf("temp= %d\n\r", temperatureDegreeC >> 8);  
 
   return (int16_t) temperatureDegreeC;
   /* USER CODE BEGIN SYS_GetTemperatureLevel_2 */

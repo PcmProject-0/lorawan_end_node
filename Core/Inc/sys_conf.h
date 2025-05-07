@@ -43,13 +43,13 @@ extern "C" {
   * @brief Temperature and pressure values are retrieved from sensors shield
   *        (instead of sending dummy values). It requires MEMS IKS shield
   */
-#define SENSOR_ENABLED              0
-#define X_NUCLEO_IKS01A2
+#define SENSOR_ENABLED              0//1//PCM---0
+#define X_NUCLEO_IKS01A2                //1//PCM--- NO HABIA NADA
 
 /**
   * @brief  Verbose level for all trace logs
   */
-#define VERBOSE_LEVEL               VLEVEL_M
+#define VERBOSE_LEVEL               VLEVEL_H//pcm--- VLEVEL_M
 
 /**
   * @brief Enable trace logs
@@ -59,7 +59,7 @@ extern "C" {
 /**
   * @brief Enable MCU Debugger pins (dbg serial wires, sbg spi, etc)
   */
-#define DEBUGGER_ENABLED            0
+#define DEBUGGER_ENABLED            1//pcm--- 0
 
 /**
   * @brief Enable four wires usable as probes (two of them PROBE1 and PROBE2 used by the MW)

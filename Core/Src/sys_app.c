@@ -34,7 +34,7 @@
 #include "sys_sensors.h"
 
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* External variables ---------------------------------------------------------*/
@@ -185,7 +185,8 @@ uint8_t GetBatteryLevel(void)
   APP_LOG(TS_ON, VLEVEL_M, "VDDA= %d\r\n", batteryLevel);
 
   /* USER CODE BEGIN GetBatteryLevel_2 */
-
+//pcm+++
+    printf("VDDA= %d\r\n", batteryLevel);
   /* USER CODE END GetBatteryLevel_2 */
 
   return batteryLevel;  /* 1 (very low) to 254 (fully charged) */
